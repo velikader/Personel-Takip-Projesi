@@ -11,9 +11,9 @@ using System.Data.SqlClient;
 
 namespace PersonalKayıtUygulaması
 {
-    public partial class Form1 : Form
+    public partial class FrmAnaForm : Form
     {
-        public Form1()
+        public FrmAnaForm()
         {
             InitializeComponent();
         }
@@ -106,6 +106,44 @@ namespace PersonalKayıtUygulaması
             if(label8.Text=="False")
             { radioButton2.Checked = true; }
             
+        }
+
+        private void BtnSil_Click(object sender, EventArgs e)
+        {
+            baglantı.Open();
+            SqlCommand KomutSil = new SqlCommand("Delete From Tbl_Personel Where PerId = @k1",baglantı);
+            KomutSil.Parameters.AddWithValue("@k1", TxtId.Text);
+            KomutSil.ExecuteNonQuery();
+            baglantı.Close();
+            MessageBox.Show("Kayıt Silindi");
+        }
+
+        private void BtnGüncelle_Click(object sender, EventArgs e)
+        {
+            baglantı.Open();
+            SqlCommand Guncelle = new SqlCommand("Update Tbl_Personel Set PerAd=@a1,PerSoyad=@a2,PerSehir=@a3,PerMaas=@a4,PerDurum=@a5,PerMeslek=@a6 where PerId=@a7",baglantı);
+            Guncelle.Parameters.AddWithValue("@a1", TxtAd.Text);
+            Guncelle.Parameters.AddWithValue("@a2", TxtSoyad.Text);
+            Guncelle.Parameters.AddWithValue("@a3", CmbSehir.Text);
+            Guncelle.Parameters.AddWithValue("@a4", MskMaas.Text);
+            Guncelle.Parameters.AddWithValue("@a5", label8.Text);
+            Guncelle.Parameters.AddWithValue("@a6", TxtMeslek.Text);
+            Guncelle.Parameters.AddWithValue("@a7", TxtId.Text);
+            Guncelle.ExecuteNonQuery();
+            baglantı.Close();
+            MessageBox.Show("Personel Bilgisi Güncellendi");
+        }
+
+        private void BtnIstatistik_Click(object sender, EventArgs e)
+        {
+            FrmIstatistik fr = new FrmIstatistik();
+            fr.Show();
+        }
+
+        private void BtnGrafik_Click(object sender, EventArgs e)
+        {
+            FrmGrafik frg = new FrmGrafik();
+            frg.Show();
         }
     }
 }
