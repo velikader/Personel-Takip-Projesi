@@ -20,7 +20,7 @@ Bu proje, Windows Form uygulaması olarak geliştirilmiş bir personel takip sis
 
 ## Kurulum
 
-1. Projeyi klonlayın: `git clone https://github.com/kullanici/adı.git`
+1. Projeyi klonlayın: `git clone https://github.com/velikader/Personel-Takip-Projesi`
 2. Visual Studio IDE'sinde projeyi açın.
 3. Proje dosyalarınızı Visual Studio'da açtıktan sonra `App.config` dosyasındaki veritabanı bağlantı bilgilerini kendi veritabanı bilgilerinizle güncelleyin.
 4. Projeyi derleyin ve çalıştırın.
