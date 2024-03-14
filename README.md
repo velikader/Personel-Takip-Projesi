@@ -29,7 +29,8 @@ Bu proje, Windows Form uygulaması olarak geliştirilmiş bir personel takip sis
 
 ![FrmGiris](https://github.com/velikader/Personel-Takip-Projesi/assets/110414749/e01715e5-ca78-4f36-bce2-e8f903b01462)
 
-![FrmAna](https://github.com/velikader/Personel-Takip-Projesi/assets/110414749/1c751a86-211c-4bda-978d-d52ac498431e)
+![vk1](https://github.com/velikader/Personel-Takip-Projesi/assets/110414749/9116708a-c10e-4c99-880f-ae96546076cf)
+
 
 ![FormGraİst](https://github.com/velikader/Personel-Takip-Projesi/assets/110414749/bd3fa76c-912c-4403-bfbf-5abdd33d6946)
 
